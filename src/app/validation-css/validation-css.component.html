@@ -1,0 +1,10 @@
+<div class="col-md-5 bg-white mx-auto p-4 m-2">
+    <form [formGroup] ="myform" >
+        <input type="text" name="nm" id="" placeholder="Name" class="form-control my-2" formControlName="nm">
+
+        <input type="text" name="mb" id="" placeholder="Number" class="form-control my-2" formControlName="mb">
+
+        <button type="submit" class="btn btn-danger" [disabled]="myform.invalid">Add</button>
+
+    </form>
+</div>

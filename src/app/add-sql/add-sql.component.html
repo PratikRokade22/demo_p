@@ -1,0 +1,17 @@
+<div class="col-md-6 p-3 m-3 bg-secondary shadow-lg">
+    <p class="text-danger">{{msg}}</p>
+    <form [formGroup]="studentform" (ngSubmit)="demo()">
+      
+        <label for="nm">Name</label>
+        <span class="text-danger">*</span>
+        <input type="text" name="nm" id="nm" formControlName="nm"
+         class="form-control"><br>
+    
+    
+        <label for="nm">Address</label>
+        <span class="text-danger">*</span>
+        <input type="text" name="adr" id="adr" formControlName="adr"
+         class="form-control ">
+    
+        <button type="submit" class="btn btn-success mt-3" [disabled]="studentform.invalid">Add</button>
+    </form>

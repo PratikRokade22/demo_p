@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="bg-secondary text-dark col-md-5 mx-auto px-3 py-2 ">
+        <h1 class="bg-danger text-white p-3 text-center"> Add Student</h1>
+
+        <form [formGroup]="myform" (ngSubmit)="demo()" >
+            <input type="text" name="" id="" class="form-control mt-3 text-center" placeholder="Name" formControlName="nm">
+
+            <input type="text" name="" id="" class="form-control mt-3 mb-3 text-center" placeholder="Mobile no" formControlName="mob">
+
+            <!-- <p class="text-white">Please select your Gender</p>
+              <input type="radio" id="male" name="fav_language" value="male">
+              <label for="male" class="text-white">Male</label>
+              <input type="radio" id="Female" name="fav_language" value="Female">
+              <label for="css" class="text-white">Female </label><br>
+             -->
+            
+
+<select name="city" id="city" class="form-control mt-3 text-center" formControlName="adr">
+    <option   value="" disabled>--Select City--</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Pune">Pune </option>
+  <option value="Satara">Satara</option>
+
+</select>
+ 
+            
+<input type="date" name="" id="" placeholder="Select your Birthdate" class="form-control mt-3 mb-3 text-center" formControlName="bdate">
+
+<button type="submit" class="btn btn-danger" [disabled]="myform.invalid">Add</button>
+        </form>
+
+    </div>
+    <div class="bg-secondary text-white col-md-5 mx-auto p-2">
+    <h1 class="bg-danger p-2 text-center">Student Table</h1>
+    <table class="table table-bordered text-white " >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                
+                <th>City</th>
+                <th>Birthdate</th>
+                <td>Action</td>  
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of infoData ; index as id" >
+                <td>{{id+1}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.mob}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.bdate}}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="delete(i.id)"> Delete</button>
+                </td>          
+             </tr>
+        </tbody>
+
+
+    </table>
+
+    </div>
+
+</div>
+
+<div class="col-md-10 mx-auto bg-white text-dark mt-5 p-4" >
+    <h1 class="bg-danger text-white p-2 text-center">HTML CODE</h1>
+<div *ngFor="let c of infoData2 ">{{c.html}}</div>
+</div>
+
+
+
+<div class="col-md-10 mx-auto bg-white text-dark mt-5 P-4 " >
+    <h1 class="bg-danger text-white p-2 text-center">TS CODE</h1>
+
+    <div *ngFor="let c of infoData2 ">{{c.ts}}</div>
+    </div>

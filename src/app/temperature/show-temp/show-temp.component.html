@@ -1,0 +1,14 @@
+<div class="col-md-12 bg-white text-dark text-center p-4">
+  
+    <select class="form-select text-center">
+        <option selected disabled >CITY</option>
+        <option  *ngFor="let t of tempdata ;index as i " value='i'  >{{i+1}} - {{t.tcity}}</option>
+        
+      
+        </select>
+     
+
+    <div class="col-md-3 bg-dark mx-auto mt-5 text-warning text-center p-4">
+           <h1  ></h1> 
+    </div>
+ </div>

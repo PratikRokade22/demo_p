@@ -1,0 +1,15 @@
+<div class="col-md-12 bg-white text-dark text-center p-4">
+
+   <h1 class="text-danger bg-secondary p-3"> Add Temperature</h1> 
+
+   <form [formGroup]="tempform" (ngSubmit)="Demo()">
+    <input type="text" name="" id="" placeholder="CITY" class="form-control mb-4 text-center text-dark" formControlName="ct">
+
+    <input type="number" name="" id="" placeholder="Temperature" class="form-control mb-4 text-center" formControlName="tmp">
+
+    <button type="submit" class="btn btn-danger " [disabled]="tempform.invalid">
+        Add
+    </button>
+
+   </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="col-md-4 m-2 p-2 mx-auto shadow-lg p-4 bg-secondary">
+    <h1 class="text-danger">Student Form</h1>
+
+        <form [formGroup]="studentf" (ngSubmit)="demo()">
+            <label for="nm">Name</label>
+            <input type="text" name="nm" id="nm" class="form-control my-3" formControlName="nm">
+            
+            <label for="adr">Address</label>
+            <input type="text" name="adr" id="adr" class="form-control my-3" formControlName="adr">
+
+            <input type="submit" value="Add Student" class=" btn btn-primary " [disabled]="studentf.invalid">
+
+
+
+
+        </form>
+
+
+        
+</div>
+<div class="bg-white col-md-6 mx-auto"><app-child-component [x]="info"></app-child-component></div>
+

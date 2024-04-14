@@ -1,0 +1,80 @@
+<div class="col-md-6 bg-secondary p-2 m-2 text-center mx-auto">
+
+    <form #myForm="ngForm" (ngSubmit)="marks(myForm.value)"> 
+
+     
+   <label for="nm">Name</label>
+   <span class="text-danger">*</span>    <span *ngIf="nm.invalid && nm.touched" class=" text-danger "> Fill this Field</span>
+   <input type="text" class="form-control mb-4" name="nm" id="nm" ngModel required #nm="ngModel">
+
+
+   <label for="mr" class="mt-2">Marathi</label>
+   <span class="text-danger">*</span>
+   <input type="number" class="form-control mb-4" name="mr" id="mr"  ngModel required>
+
+   <label for="hn">Hindi</label>
+   <span class="text-danger">*</span>
+   <input type="number" class="form-control mb-4" name="hn" id="hn" ngModel required>
+    
+
+   <label for="en">English </label>
+   <span class="text-danger">*</span>
+   <input type="number" class="form-control mb-4" name="en" id="en" ngModel required>
+   
+   <label for="mt">Maths </label>
+   <span class="text-danger">*</span>
+   <input type="number" class="form-control mb-4" name="mt" id="mt" ngModel required>
+
+   <label for="hs">History </label>
+   <span class="text-danger">*</span>
+   <input type="number" class="form-control mb-4" name="hs" id="hs" ngModel required>
+   
+   <button type="submit" class="btn btn-primary m-2 p-2" [disabled]="myForm.invalid">Result</button>
+</form>
+
+
+
+</div>
+<div class="col-md-11 bg-white shadow-lg text-dark p-2 m-2 text-center mx-auto">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name </th>
+                <th>Marathi</th>
+                <th>Hindi</th>
+                <th>English</th>
+                <th>Maths</th>
+                <th>History</th>
+                <th>Total</th>
+                <th>%</th>
+                
+
+                
+
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let s of mymarks;  index as i">
+                <td>{{i+1}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.marathi}}</td>
+                <td>{{s.Hindi}}</td>
+                <td>{{s.English}}</td>
+                <td>{{s.maths}}</td>
+                <td>{{s.history}}</td>
+                <td>{{s.Total}}</td>
+                <td>{{s.per}}</td>
+               
+
+                
+
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>

@@ -1,0 +1,15 @@
+<div class="col-md-5 p-3 bg-secondary text-center mx-auto" >
+    <form #myForm="ngForm" (ngSubmit)="addstudent(myForm.value)">
+        <label for="nm">Name</label>
+        <span class="text-danger">*</span>
+        <input type="text" class="form-control mb-4" name="nm" id="nm" ngModel required>
+
+        <label for="adr">Addess</label>
+        <span class="text-danger">*</span>
+        <input type="text" class="form-control mb-4" name="adr" id="adr" ngModel required>
+         <div class="text-center">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+    </form>
+   <div class="col bg-white shadow-lg m-2 p-2 text-dark" *ngFor="let s of student">{{s.name}} - {{s.adress}} </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="">
+    <h3 class="mb-4 p-2 bg-secondary text-center"> SWITCH</h3>
+    <p class="text-white p-4">The ngIf allows us to define optional else block using the ng-template</p>
+    
+</div>
+<div  class="bg-white text-dark">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quae modi porro quod error! Deserunt quaerat asperiores sequi assumenda! Quasi ex tempora suscipit eum molestias rerum ut laudantium id consequatur.
+
+
+</div>
+<div class="col-md-5 m-2 p-2">
+    <input type="number" [(ngModel)]="sw" class="form-control m-3">
+      <button type="button" (click)="check()" class="btn btn-primary m-3">Courses</button>
+    
+  <div [ngSwitch]="x" class="bg-white text-dark col-md-5 m-3 p-3 mx-auto text-center">
+    <h1 class="bg-white text-dark" *ngSwitchCase="1"> Mon</h1>
+    <h1 class="bg-white text-dark" *ngSwitchCase="2"> Tuesday</h1>
+    <h1 class="bg-white text-dark" *ngSwitchCase="3"> Wensday</h1>
+    <h1 class="bg-white text-dark" *ngSwitchCase="4"> Thuesday</h1>
+    
+    <h1 class="bg-white text-dark" *ngSwitchCase="5"> Friday</h1>
+    <h1 class="bg-white text-dark" *ngSwitchCase="6"> Saturday </h1>
+   
+    <h1 class="bg-white text-dark" *ngSwitchDefault> Sunday </h1>
+
+
+
+
+
+</div>
+
+  </div>
+

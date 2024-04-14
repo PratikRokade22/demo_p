@@ -1,0 +1,27 @@
+<h1 class="text-danger mb-4 text-center">Online Api Data</h1>
+<div class="bg-secondary text-white mx-auto col-md-9">
+    
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email-id</th>
+       
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o of onlineData">
+            <td>{{o.id}}</td>
+            <td>{{o.name}}</td>
+
+            <td>{{o.email}}</td>
+
+            
+
+        </tr>
+    </tbody>
+        
+    </table>
+</div>

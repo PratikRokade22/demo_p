@@ -1,0 +1,14 @@
+<div class="col-md-10 bg-white text-dark mx-auto p-3 ">
+    <div class="col-md-6 mx-auto shadow-lg p-2">
+    <input type="text" class="form-control my-4" placeholder="Enter Menu Name" #menuname>
+</div>
+    <div class="text-center">
+        <button class="btn btn-danger" (click)="collectname(menuname)">send to child</button>
+    </div>
+
+
+<button type="button"  class="btn btn-danger" (click)="destroyComp()"> Distroy</button>
+<div class="col-md-5 mx-auto">
+<app-hook-child [chiiddata]="mname" *ngIf="staus">{{mname}}</app-hook-child>
+</div>
+</div>

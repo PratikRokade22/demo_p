@@ -1,0 +1,27 @@
+<h1 class="text-danger mb-4 text-center">Student Data</h1>
+<div class="bg-secondary text-white mx-auto col-md-9">
+    
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Post</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of StudentData">
+            <td>{{s.sid}}</td>
+            <td>{{s.snm}}</td>
+
+            <td>{{s.scompany}}</td>
+
+            <td>{{s.spost}}</td>
+
+        </tr>
+    </tbody>
+        
+    </table>
+</div>

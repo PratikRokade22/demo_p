@@ -1,0 +1,19 @@
+<div class="col-md-6 p-5 bg-white text-dark" >  <div class="bg-secondary py-2 px-4 mb-4"><h1 class="text-danger text-center">Student Marks </h1></div>
+<p class="text-danger">{{msg}}</p>
+<form [formGroup]="studentform" (ngSubmit)="demo()">
+    <input type="text" name="nm" formControlName="nm" class="form-control mb-4" placeholder="Name of student">
+    <input type="number" name="mr" formControlName="mr" class="form-control mb-4" placeholder="Marathi">
+    <input type="number" name="hn" formControlName="hn" class="form-control mb-4" placeholder="Hindi">
+    <input type="number" name="en" formControlName="en" class="form-control mb-4" placeholder="English">
+    <input type="number" name="mt" formControlName="mt" class="form-control mb-4" placeholder="Maths">
+    <input type="number" name="hs" formControlName="hs" class="form-control mb-4" placeholder="History">
+    <button type="submit" class="btn btn-primary " [disabled]="studentform.invalid"> Add student</button>
+
+
+
+    
+
+
+</form>
+
+</div>

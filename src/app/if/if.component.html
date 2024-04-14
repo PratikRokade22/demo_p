@@ -1,0 +1,12 @@
+<div class="">
+    <h3 class="mb-4 p-2  bg-secondary bor text-center">IF</h3>
+    <p class="text-white p-4">A structural directive that conditionally includes a template based on the value of an expression coerced to Boolean. When the expression evaluates to true, Angular renders the template provided in a then clause, and when false or null, Angular renders the template provided in an optional else clause. The default template for the else clause is blank..</p>
+        <div class="bg-danger">
+            <p class="bg-secondary p-4"></p>
+        </div>
+
+        <div >
+          <p *ngIf="status">click on button for hide</p>  
+          <button type="button" class="btn btn-primary" (click)="check()"> Show </button>
+        </div>
+</div>
